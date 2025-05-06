@@ -1,0 +1,38 @@
+Comandos de instalaçaão das paradinhas
+
+node -v
+npm init -y
+npm i typescript
+npm i ts-node-dev
+npm i -D @types/node
+npm i --save-dev tsconfig-paths
+tsc --init
+npm i
+
+npm i express
+npm i cors
+npm i express-async-errors --force
+npm i -D @types/express --force
+npm i -D @types/cors --force
+
+npm i typeorm@0.2.45 --force
+npm i reflect-metadata pg --force
+ 
+Fazer o orm config com as configurações do postgres ->
+
+docker run --name postgres -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
+docker ps -> vê se o docker ta rodando 
+
+npm run typeorm migration:run
+npm run typeorm migration:create -- -n CreateProducts
+npm run typeorm migration:run
+
+npm i express@4.18.2 --force
+npm i celebrate
+npm i -D @types/joi
+
+npm run typeorm migration:create -- -n CreateUsers
+npm run typeorm migration:run
+
+npm i bcryptjs
+npm i -D @types/bcryptjs

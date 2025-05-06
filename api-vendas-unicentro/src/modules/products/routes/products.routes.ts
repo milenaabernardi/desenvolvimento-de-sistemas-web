@@ -21,7 +21,7 @@ productsRouter.get('/:id', celebrate({[Segments.PARAMS] : {id : Joi.string().uui
   }
 });
 
-productsRouter.post("/", celebrate({[Segments.BODY] : {name: Joi.string().required(), price: Joi.number().precision(2).required(), quantity: Joi.number().required()}}), async (req, res, next) => {
+productsRouter.post("/", celebrate({[Segments.BODY] : {name: Joi.string().required(), price: Joi.number().precision(2).required(), quantity: Joi.number().min(0).required()}}), async (req, res, next) => {
   try {
     await productsController.create(req, res, next);
   } catch (err) {
@@ -29,7 +29,7 @@ productsRouter.post("/", celebrate({[Segments.BODY] : {name: Joi.string().requir
   }
 });
 
-productsRouter.put('/:id', celebrate({[Segments.PARAMS] : {id : Joi.string().uuid().required()}, [Segments.BODY] : {name: Joi.string().required(), price: Joi.number().precision(2).required(), quantity: Joi.number().required()}}),  async (req, res, next) => {
+productsRouter.put('/:id', celebrate({[Segments.PARAMS] : {id : Joi.string().uuid().required()}, [Segments.BODY] : {name: Joi.string().required(), price: Joi.number().min(0).precision(2).required(), quantity: Joi.number().required()}}),  async (req, res, next) => {
   try {
     await productsController.update(req, res, next);
   } catch (err) {
