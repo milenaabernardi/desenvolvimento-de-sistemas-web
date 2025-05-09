@@ -1,5 +1,3 @@
-Comandos de instalaçaão das paradinhas
-
 node -v
 npm init -y
 npm i typescript
@@ -36,3 +34,6 @@ npm run typeorm migration:run
 
 npm i bcryptjs
 npm i -D @types/bcryptjs
+
+npm i jsonwebtoken
+npm i -D @types/jsonwebtoken
