@@ -15,6 +15,7 @@ export default class SendForgotPasswordEmailService {
   public async execute({ email }: IRequest): Promise<void> {
     const usersRepository = getCustomRepository(UsersRepository);
     const usersTokensRespository = getCustomRepository(UserTokensRepository);
+    const forgotPasswordTemplate = path.resolve(__dirname, '..', 'views', 'forgot_password.hbs');
 
     const user = await usersRepository.findByEmail(email);
     if (!user) {
@@ -23,11 +24,17 @@ export default class SendForgotPasswordEmailService {
 
     const { token } = await usersTokensRespository.generate(user.id);
 
-    //futuramente vamos implementar o método de enviar isso para o email.
     console.log(token);
     await EtherealMail.sendMail({
-      to: email,
-      body: `Solicitação de redefinição de senha recebida: ${token} `
-    })
+      to: { name: user.name, email: user.email },
+      subject: '[API VENDAS] Recuperação de Senha',
+      templateData: {
+        file: forgotPasswordTemplate,
+        variables: {
+          name: user.name,
+          link: 'http://localhost:3000/reset_password?tokens=${token} '
+        },
+      },
+    });
   }
 }
