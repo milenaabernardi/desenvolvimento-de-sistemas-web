@@ -50,3 +50,7 @@ npm i nodemailer
 npm i -D @types/nodemailer
 
 npm i handlebars
+
+npm run typeorm migration:create -- -n CreateCustomers
+npm run typeorm migration:run
+
