@@ -40,8 +40,8 @@ export default class EtherealMail {
         });
         const message = await trasporter.sendMail({
             from: {
-                name: from?.name || 'Equipe API vendas',
-                address: from?.email || 'equipe_vendas@apivendas.com.br'
+                name: from?.name || 'Equipe Spotify',
+                address: from?.email || 'equipe_spotify@spotify.com.br'
             },
             to: {
                 name: to.name,
