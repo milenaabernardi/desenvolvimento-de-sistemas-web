@@ -1,0 +1,761 @@
+type: collection.insomnia.rest/5.0
+name: Milena
+meta:
+  id: wrk_181fae85d99b4e28a3863c7a2b905ed2
+  created: 1751603635869
+  modified: 1751603635869
+  description: ""
+collection:
+  - name: Playlists
+    meta:
+      id: fld_220faa7c31e149faa029fe98eee55719
+      created: 1751463118659
+      modified: 1751506958635
+      sortKey: -1751463118660
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/playlists"
+        name: Create
+        meta:
+          id: req_d8195f165bf14792a477644c7874b716
+          created: 1751463162430
+          modified: 1751608348888
+          isPrivate: false
+          description: ""
+          sortKey: -1751463162430
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome":"dia da maldade",
+            	"criador":"milenaabernardi",
+            	"genero":"funk",
+            	"duracao_total":"18:42",
+            	"descricao":"playlist de funk"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/playlists/criador/milenaabernardi"
+        name: ListByCriador
+        meta:
+          id: req_b9950f93850a4f7f87ac236034546d46
+          created: 1751464000632
+          modified: 1751605824954
+          isPrivate: false
+          description: ""
+          sortKey: -1751464000632
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/playlists/f7c9ec2e-0155-4cac-826c-5453acc65760"
+        name: Show
+        meta:
+          id: req_65592880dff145af9c1cbe5e27a1ef6a
+          created: 1751464067248
+          modified: 1751608384125
+          isPrivate: false
+          description: ""
+          sortKey: -1751464067248
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/playlists/5874b1d0-84c8-45ee-aff7-d0a19892fac3"
+        name: Edit
+        meta:
+          id: req_8cd9793178b84eb39f08a3683569f2ef
+          created: 1751464202444
+          modified: 1751607726629
+          isPrivate: false
+          description: ""
+          sortKey: -1751464202444
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome":"meu eletro minha vida",
+            	"criador":"milenaabernardi",
+            	"genero":"eletrônica",
+            	"duracao_total":"04:32",
+            	"descricao":"playlist de eletrônico"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/playlists/5874b1d0-84c8-45ee-aff7-d0a19892fac3"
+        name: Delete
+        meta:
+          id: req_cf02cf9c5c0340f3a788524a4731a564
+          created: 1751464344201
+          modified: 1751607734452
+          isPrivate: false
+          description: ""
+          sortKey: -1751464344201
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    scripts:
+      afterResponse: ""
+      preRequest: ""
+  - name: Users
+    meta:
+      id: fld_9d4797c2d6bd4fc2a16c9e3d3e88c4e7
+      created: 1751506544197
+      modified: 1751506544197
+      sortKey: -1751506544197
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/users/"
+        name: Create
+        meta:
+          id: req_cd4dd40fb0144ea88752fe164a6a2589
+          created: 1751506552760
+          modified: 1751605769671
+          isPrivate: false
+          description: ""
+          sortKey: -1751506552760
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name":"milenaabernardi",
+            	"email":"milenaabernardi@gmail.com",
+            	"password":"123123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users"
+        name: List
+        meta:
+          id: req_f89b4472de3d4931b088936116e41954
+          created: 1751506634707
+          modified: 1751605760180
+          isPrivate: false
+          description: ""
+          sortKey: -1751506634707
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users/avatar/"
+        name: UpdateAvatar
+        meta:
+          id: req_5b4ccf2b712747beac68af4c2831fc66
+          created: 1751509641216
+          modified: 1751607814513
+          isPrivate: false
+          description: ""
+          sortKey: -1751509641216
+        method: PATCH
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: avatar
+              value: ""
+              disabled: false
+              id: pair_b5bea6b995024a97943bc92142910d17
+              fileName: C:\Users\User\Downloads\Cópia de capa spotify funk atualizada.png
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    scripts:
+      afterResponse: ""
+      preRequest: ""
+  - name: Sessions
+    meta:
+      id: fld_1f1768ef793a4a2ea7f6952328376de6
+      created: 1751506659223
+      modified: 1751506659223
+      sortKey: -1751506659224
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/sessions"
+        name: Create
+        meta:
+          id: req_08ab1682ceda488c9109dbfe09a802aa
+          created: 1751506664168
+          modified: 1751606663071
+          isPrivate: false
+          description: ""
+          sortKey: -1751506664169
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email":"milenaabernardi@gmail.com",
+            	"password":"123123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    scripts:
+      afterResponse: ""
+      preRequest: ""
+  - name: Profiles
+    meta:
+      id: fld_6fcb823383e549eca40c40e063d4f8a0
+      created: 1751510522480
+      modified: 1751510522480
+      sortKey: -1751510522480
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/profiles"
+        name: Show
+        meta:
+          id: req_3d902e338ae94ed99e23a1eceddaa28e
+          created: 1751510525024
+          modified: 1751606664925
+          isPrivate: false
+          description: ""
+          sortKey: -1751510526747
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/profiles"
+        name: Edit
+        meta:
+          id: req_2ea372bc2b4e419eaf5cb76f9f5aef8f
+          created: 1751510574309
+          modified: 1751608147436
+          isPrivate: false
+          description: ""
+          sortKey: -1751510574309
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name":"milena",
+            	"email":"milenaabernardi@gmail.com",
+            	"old_password":"123123",
+              "password":"123456",
+              "password_confirmation":"123456"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    scripts:
+      afterResponse: ""
+      preRequest: ""
+  - name: Password
+    meta:
+      id: fld_ed8480f8f07e44fe857eb42240ffe5bc
+      created: 1751510733276
+      modified: 1751510733276
+      sortKey: -1751510733276
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/password/forgot"
+        name: Forgot
+        meta:
+          id: req_e92c6bf2ba074f8cbb0d158fee2fe16d
+          created: 1751510741103
+          modified: 1751607504717
+          isPrivate: false
+          description: ""
+          sortKey: -1751510741103
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"email":"milenaabernardi@gmail.com"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/password/reset"
+        name: Reset
+        meta:
+          id: req_ba7d8c3773ac4f579fab76c5a6549871
+          created: 1751510857011
+          modified: 1751608207416
+          isPrivate: false
+          description: ""
+          sortKey: -1751510857011
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"token":"3661b9ab-aeb0-4ff5-ab82-df96449e7235",
+            	"password":"123123",
+            	"password_confirmation":"123123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    scripts:
+      afterResponse: ""
+      preRequest: ""
+  - name: Musicas
+    meta:
+      id: fld_51e492d3e69c43e891674cceaf4fb8c8
+      created: 1751516733523
+      modified: 1751516733523
+      sortKey: -1751516733523
+      description: ""
+    children:
+      - url: "{{ _.base_url }}/musicas"
+        name: Create
+        meta:
+          id: req_c4c78ce0227147c58b922f6e89bc9e13
+          created: 1751516737107
+          modified: 1751609853898
+          isPrivate: false
+          description: ""
+          sortKey: -1751516739341
+        method: POST
+        body:
+          mimeType: application/json
+          text: |+
+            {
+            	"playlist_id":"13125487-9ce0-4664-9617-5fb3ae1373f4",
+            	"titulo":"False Need",
+            	"artista":"Mochakk",
+            	"duracao":"00:03:35",
+            	"genero":"eletrônica",
+            	"ano_lancamento":"2022"
+            }
+
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/musicas/"
+        name: Show
+        meta:
+          id: req_fa7670e30f744a4dbd4fa9d018bf8f26
+          created: 1751517988859
+          modified: 1751609278752
+          isPrivate: false
+          description: ""
+          sortKey: -1751517988859
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/musicas/artista/Mochakk"
+        name: ListByArtista
+        meta:
+          id: req_a953c2c6070049938cc63202469da40f
+          created: 1751518670047
+          modified: 1751609910017
+          isPrivate: false
+          description: ""
+          sortKey: -1751518670047
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/musicas"
+        name: Index
+        meta:
+          id: req_3111c68bb0ca46d48dc7f8385e0bd970
+          created: 1751518811378
+          modified: 1751605864607
+          isPrivate: false
+          description: ""
+          sortKey: -1751518670147
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/musicas/cf99fc47-ce6b-48f5-8bda-1457093c14e6"
+        name: Edit
+        meta:
+          id: req_6e0306dc068d4a0f95192081bb6c9959
+          created: 1751518864696
+          modified: 1751609945660
+          isPrivate: false
+          description: ""
+          sortKey: -1751518864696
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"playlist_id":"13125487-9ce0-4664-9617-5fb3ae1373f4",
+            	"titulo":"False Need",
+            	"artista":"Mochakk",
+            	"duracao":"00:03:35",
+            	"genero":"eletrônica",
+            	"ano_lancamento":"2022"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/musicas/d2465583-4b85-4952-aecb-18df41a11886"
+        name: UpdatePlaylist
+        meta:
+          id: req_808cfd35f5804b8e87ff557a23cdd39c
+          created: 1751518927605
+          modified: 1751609967846
+          isPrivate: false
+          description: ""
+          sortKey: -1751518927605
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"playlist_id":"13125487-9ce0-4664-9617-5fb3ae1373f4"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3333/musicas/cf99fc47-ce6b-48f5-8bda-1457093c14e6
+        name: Delete
+        meta:
+          id: req_240b3dc80d724471a43f03a82208b1f5
+          created: 1751519375120
+          modified: 1751609547210
+          isPrivate: false
+          description: ""
+          sortKey: -1751519375120
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        authentication:
+          type: bearer
+          token: "{% response 'body', 'req_08ab1682ceda488c9109dbfe09a802aa',
+            'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+        scripts:
+          preRequest: ""
+          afterResponse: ""
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+    scripts:
+      afterResponse: ""
+      preRequest: ""
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_a63254b007854675830fd2ad9d3b0dc1
+    created: 1751463060171
+    modified: 1751463060171
+environments:
+  name: Base Environment
+  meta:
+    id: env_5af7c6b8d6734d4fa1ed44e3f98cf830
+    created: 1751463060164
+    modified: 1751506717041
+    isPrivate: false
+  data:
+    base_url: http://localhost:3333
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NTE1MDY2OTgsImV4cCI6MTc1MTU5MzA5OCwic3ViIjoiZmY5Zjc2NjctMDlmNy00NWNmLWEzY2QtMjc3YTJmNDgwMGM5In0.5u_pzKSMVJarX5L8Gv9dwGkEUOYli7ta288oGiZxeU8
