@@ -87,7 +87,7 @@ collection:
         meta:
           id: req_65592880dff145af9c1cbe5e27a1ef6a
           created: 1751464067248
-          modified: 1751608384125
+          modified: 1751621398143
           isPrivate: false
           description: ""
           sortKey: -1751464067248
@@ -635,12 +635,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: "{{ _.base_url }}/musicas/cf99fc47-ce6b-48f5-8bda-1457093c14e6"
+      - url: "{{ _.base_url }}/musicas/d2465583-4b85-4952-aecb-18df41a11886"
         name: Edit
         meta:
           id: req_6e0306dc068d4a0f95192081bb6c9959
           created: 1751518864696
-          modified: 1751609945660
+          modified: 1751621076538
           isPrivate: false
           description: ""
           sortKey: -1751518864696
@@ -649,7 +649,7 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"playlist_id":"13125487-9ce0-4664-9617-5fb3ae1373f4",
+            	"playlist_id":"f7c9ec2e-0155-4cac-826c-5453acc65760",
             	"titulo":"False Need",
             	"artista":"Mochakk",
             	"duracao":"00:03:35",
